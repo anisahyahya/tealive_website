@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Tealive</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+        }
+
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .menu a:hover {
+            background-color: #2695a3;
+            color: white;
+        }
+
+        .banner img {
+            width: 100vw;
+            height: auto;
+            align-items: center;
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ffcc00;
+            background-color: #3d1a75;
+            padding: 10px 0;
+        }
+
+        .flashcards-container {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .flashcards {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .flashcard {
+            width: 100vw; 
+            max-width: 100vw; 
+            background-color: #2695a3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .flashcard img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .flashcard p {
+            padding: 10px;
+            font-size: 16px;
+        }
+		
+		.about-tealive {
+            background: linear-gradient(135deg, #6f5da8, #2695a3);
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+            font-size: 18px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .about-tealive p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .world-map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .world-map {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        footer {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 50px 20px 20px;
+            font-size: 15px;
+        }
+
+        .footer-container {
+            background-color: #6f5da8;
+            padding: 50px 20px 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 100;
+            padding: 100px;
+        }
+
+        .social-links a {
+            font-size: 24px;
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logotealive.jpg" alt="Tealive Logo">
+        </div>
+        <div class="menu">
+            <a href="file:///C:/Users/user/Desktop/tealive/ramadandonation.html">Ramadan Donation</a>
+            <a href="file:///C:/Users/user/Desktop/tealive/strawlesscampaign.html">Strawless Campaign</a>
+            <a href="file:///C:/Users/user/Desktop/tealive/jomkosongcampaign.html">Jom Kosong</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="https://my-test-11.slatic.net/shop/348e3afa52ae21454773d7d9d6917d29.jpeg" alt="Tealive Banner">
+    </div>
+
+    <div class="section-header">Tealive Campaign</div>
+
+    <div class="flashcards-container">
+        <button class="arrow left" onclick="scrollFlashcards(-1)">&#9664;</button>
+        <div class="flashcards" id="flashcards">
+            <div class="flashcard">
+                <img src="ramadanbanner.jpg" alt="Flashcard 1">
+                <p>Ramadan Donation Campaign.</p>
+            </div>
+            <div class="flashcard">
+                <img src="https://www.everydayonsales.com/wp-content/uploads/sites/5/2020/02/EOS-MY-Tealive-Reuseable.jpg" alt="Flashcard 2">
+                <p>Tealive Eco Strawless Cup.</p>
+            </div>
+            <div class="flashcard">
+                <img src="jomkosongbanner.jpg" alt="Flashcard 3">
+                <p>Jom Kosong Campaign.</p>
+            </div>
+        </div>
+        <button class="arrow right" onclick="scrollFlashcards(1)">&#9654;</button>
+    </div>
+    
+    <div class="section-header">About Tealive</div>
+    <div class="about-tealive">
+        <p>
+            Tealive is Southeast Asia’s leading lifestyle tea brand, boasting over 1,000 outlets worldwide. Established in Malaysia in 2017, Tealive was born from a passion for bringing modern tea culture to the world.
+        </p>
+        <p>
+            With a dynamic spirit of innovation, we continue to expand strategically, offering a diverse menu that includes signature milk teas, refreshing smoothies, indulgent chocolate drinks, and aromatic coffee blends.
+        </p>
+        <p>
+            Serving over five million customers monthly in Malaysia alone, Tealive has made its mark in international markets such as the Philippines, Vietnam, Myanmar, Cambodia, Brunei, Mauritius, and Canada—soon extending its reach to the UAE.
+        </p>
+    </div>
+
+    <div class="section-header">We Serve Joy Through Tea Around The World</div>
+    <div class="world-map-container">
+        <img src="https://www.tealive.com.my/images/Tealive-Map.png" alt="Tealive World Map" class="world-map">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact Us</h2>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tealiveasia" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/tealiveasia/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@tealiveasia?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p>&copy; All Rights Reserved | IMD318 Introduction to Web Content Management and Design | For Education Purpose Only</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const container = document.getElementById("flashcards");
+        const cards = container.children;
+        const cardWidth = window.innerWidth; 
+        const totalCards = cards.length;
+
+        function scrollFlashcards(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalCards - 1;
+            } else if (currentIndex >= totalCards) {
+                currentIndex = 0;
+            }
+            
+            container.style.transition = "transform 0.5s ease-in-out";
+            container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+
+        setInterval(() => {
+            scrollFlashcards(1);
+        }, 5000); // Changed to 5000ms for 8 seconds
+    </script>
+
+</body>
+</html>

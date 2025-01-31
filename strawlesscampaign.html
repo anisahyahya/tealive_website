@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Tealive - Sustainability & Strawless Cup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+			background: linear-gradient(to bottom, #6f5da8, #120c44);
+        }
+
+		.navbar {
+			display: flex;
+			justify-content: space-between; 
+			align-items: center;
+			padding: 10px 20px;
+			background-color: white;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+		}
+
+		.navbar .logo {
+			flex-shrink: 0; 
+		}
+
+		.navbar .logo img {
+			height: 40px;
+		}
+
+		.navbar .menu {
+			display: flex;
+			gap: 20px;
+			flex-grow: 1; 
+			justify-content: center;
+		}
+
+		.navbar .menu a {
+			text-decoration: none;
+			color: #333;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		.navbar .menu a:hover {
+			background-color: #2695a3;
+			color: white;
+		}
+
+        .marquee {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffcc00;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        header {
+            background-color: #6f5da8;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .sustainability {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: #120c44;
+            color: white;
+            padding: 50px;
+        }
+
+        .sustainability .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .sustainability h2 {
+            color: #ffcc00;
+            font-size: 28px;
+        }
+
+        .sustainability img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .eco-strawless {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .eco-strawless:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .eco-strawless h2 {
+            color: #2c6e49;
+            font-size: 26px;
+            font-weight: bold;
+        }
+		
+		.highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .eco-strawless img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .eco-strawless img:hover {
+            transform: scale(1.05);
+        }
+
+        .eco-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .eco-icons div {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .eco-icons img {
+            width: 180px;
+            height: 180px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .eco-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        .how-to-drink {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .how-to-drink div {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .how-to-drink img {
+            width: 180px;
+            height: 180px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .how-to-drink img:hover {
+            transform: scale(1.1);
+        }
+
+		.media-container {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+		}
+
+		.media-container img {
+			max-width: 400px;
+			border-radius: 10px;
+		}
+
+		.media-container video {
+			border-radius: 10px;
+		}
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #6f5da8;
+            color: white;
+            margin-top: 2rem;
+        }
+
+		.social-links a {
+			font-size: 24px;
+			color: white;
+			margin: 0 10px;
+			text-decoration: none;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.social-links a:hover {
+			transform: scale(1.2);
+			color: #ffcc00;
+		}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logotealive.jpg" alt="Tealive Logo">
+        </div>
+        <div class="menu">
+			<a href="file:///C:/Users/user/Desktop/tealive/index.html#">Homepage</a>
+            <a href="file:///C:/Users/user/Desktop/tealive/ramadandonation.html">Ramadan Donation</a>
+            <a href="file:///C:/Users/user/Desktop/tealive/strawlesscampaign.html">Strawless Campaign</a>
+            <a href="file:///C:/Users/user/Desktop/tealive/jomkosongcampaign.html">Jom Kosong</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>Tealive - Strawless Campaign</h1>
+        <p class="marquee">Join us in making a difference for the environment!</p>
+    </header>
+
+    <div class="eco-strawless">
+        <h2>TEALIVE ECO STRAWLESS CUP</h2>
+        <img src="https://static.wixstatic.com/media/2b5c52_7f2306c83acc4e82bfdee39800e3ccda~mv2.png" alt="Eco Strawless Cup">
+        
+         <h3><span class="highlight">What is the Eco Strawless Cup Campaign?</span></h3>
+        <p>The Eco Strawless Cup Campaign is an initiative by Tealive to promote sustainability by introducing an innovative cup design that eliminates the need for plastic straws. The cup features a built-in compartment for toppings, allowing consumers to enjoy their drinks more conveniently while reducing plastic waste.</p>
+
+        <h3><span class="highlight">What is the purpose of the campaign?</span></h3>
+        <p>The main goal of the campaign is to reduce plastic waste, particularly single-use plastic straws, and encourage more environmentally friendly consumption habits. Through this initiative, Tealive aims to raise awareness about sustainability and provide an eco-friendly alternative without compromising the drinking experience.</p>
+		<b> The campaign starts on August 30, 2024.</b>
+    </div>
+        <div class="eco-icons">
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup2.svg" alt="Eco Friendly">
+            </div>
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup3.svg" alt="Easy to Drink">
+            </div>
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup5.svg" alt="Food Grade">
+            </div>
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup1.svg" alt="No Waste">
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 40px; color: white;">HOW TO DRINK</h3>
+    <div class="how-to-drink">
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup_exp1New.png" alt="Twist Lid">
+            </div>
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup_exp2New.png" alt="Small Toppings">
+            </div>
+            <div>
+                <img src="https://www.tealive.com.my/images/image/about_us/eco_cup_exp3New.png" alt="Jelly Toppings">
+            </div>
+        </div>
+    </div>
+	
+    <div class="sustainability">
+        <div class="text">
+            <h2>WE ARE COMMITTED TO SUSTAINABILI-TEA 🍃</h2>
+            <p>Through the Tealive Eco movement, which includes our line of sustainable creations, we aim to elevate the tea-drinking experience AND create a positive environmental impact with our fans!</p>
+        </div>
+
+        <div class="media-container">
+            <img src="https://s.yimg.com/ny/api/res/1.2/AdV5Nzsuey5kI9Po7RIFZw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://media.zenfs.com/en/mmail.com.my/96973246662ef6b80aecdc3e595e1736" alt="Tealive Sustainability">
+
+            <video controls width="400">
+                <source src="videostrawless.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+	<footer>
+        <h2>Contact Us</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/tealiveasia" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/tealiveasia/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@tealiveasia?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; All Rights Reserved | IMD318 Introduction to Web Content Management and Design | For Education Purpose Only</p>
+    </footer>
+</body>
+</html>
